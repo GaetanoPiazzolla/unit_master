@@ -1,0 +1,16 @@
+<h2>Unit Master</h2>
+
+<p>Filter : <input [(ngModel)]="filter" /></p>
+<p><a routerLink="/detail">Create New Unit</a></p>
+<button (click)="getUnits()">All</button>
+<button (click)="getDisabled()">Disabled</button>
+<button (click)="getEnabled()">Enabled</button>
+<button (click)="getRunning()">Running</button>
+
+<ul>
+  <li *ngFor="let unit of units | myfilter:filter ">
+    <a routerLink="/detail/{{unit.processId}}">
+        <span>{{unit.processId}}</span>
+      </a>
+  </li>
+</ul>

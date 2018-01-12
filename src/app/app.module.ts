@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
-
+import { UnitmasterComponent } from './unitmaster/unitmaster.component';
+import { UnitdetailComponent } from './unitdetail/unitdetail.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { UnitService} from './unit.service';
+import { MyFilterPipe } from './unitmaster/myfilter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UnitmasterComponent,
+    UnitdetailComponent,
+    MyFilterPipe  
   ],
   imports: [
-    BrowserModule
+    BrowserModule,HttpClientModule, AppRoutingModule,FormsModule
   ],
-  providers: [],
+  providers: [UnitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

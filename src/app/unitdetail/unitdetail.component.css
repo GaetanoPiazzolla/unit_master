@@ -1,0 +1,11 @@
+textarea {
+    white-space: nowrap;
+    min-height: 500px; 
+    width:100%; 
+    overflow: auto;
+}
+
+#backbutton {
+    color:red;
+    background-color:black;
+}

@@ -1,0 +1,26 @@
+
+<div *ngIf="unit">
+  <h2>{{ unit.unitId | uppercase }} </h2>
+  <div>
+      <p>Enabled: {{unit.active}} </p>
+  </div>
+  <textarea [(ngModel)]="unit.conf"></textarea>
+  <button id="backbutton" (click)="goBack()">BACK</button>
+  <button (click)="update()">Update</button>
+  <button (click)="restart()">Restart</button>
+  <button (click)="start()">Start</button>
+  <button (click)="stop()">Stop</button>
+  <button (click)="enable()">Enable</button>
+  <button (click)="disable()">Disable</button>
+  <button (click)="remove()">Remove</button>
+</div>
+
+<div *ngIf="!unit">
+   <h2>New Unit</h2>
+  <textarea [(ngModel)]="newconf"></textarea>
+  <button id="backbutton" (click)="goBack()">BACK</button>
+  <button (click)="insert()">Insert</button>
+</div>
+  
+<p>Message: {{message}}</p>
+<p>Code: {{code}}</p>
