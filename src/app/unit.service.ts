@@ -9,7 +9,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class UnitService {
 
-  baseUrl = 'http://localhost:8090/demos/rest/unit/';
+  baseUrl = 'http://rigel.dedalus.lan:8090/demos/rest/unit/';
 
   options =  {
       headers: new HttpHeaders().set('Content-Type', 'application/xml; charset=utf-8')
